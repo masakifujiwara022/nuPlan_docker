@@ -103,7 +103,7 @@ python3 nuplan-devkit/nuplan/planning/script/run_simulation.py \
 > [!NOTE]
 > モデルのパスを置き換えて下さい 'planner.ml_planner.checkpoint_path="REPLACE.ckpt"'
 ```
-python3 nuplan/planning/script/run_simulation.py \
+python3 nuplan-devkitnuplan/planning/script/run_simulation.py \
     '+simulation=closed_loop_reactive_agents' \
     'model=raster_model' \
     'planner=ml_planner' \
