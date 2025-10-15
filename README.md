@@ -103,7 +103,7 @@ python3 nuplan-devkit/nuplan/planning/script/run_simulation.py \
 > [!NOTE]
 > Please replace the model path: 'planner.ml_planner.checkpoint_path="REPLACE.ckpt"'
 ```
-python3 nuplan-devkitnuplan/planning/script/run_simulation.py \
+python3 nuplan-devkit/nuplan/planning/script/run_simulation.py \
     '+simulation=closed_loop_reactive_agents' \
     'model=raster_model' \
     'planner=ml_planner' \
@@ -117,6 +117,6 @@ python3 nuplan-devkitnuplan/planning/script/run_simulation.py \
 
 ### Dashboard (nuBoard)
 ```
-python3 nuplan/planning/script/run_nuboard.py
+python3 nuplan-devkit/nuplan/planning/script/run_nuboard.py
 ```
 <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/0be0c3f3-cf25-4d98-8505-bfe767932cde" />
