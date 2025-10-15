@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  gpu:
+    container_name: my-nuPlan-cu117-gpu
+    image: nuplan/nuplan_docker:my-nuPlan-cu117
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
+    ipc: host
+    privileged: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=${XAUTH:-}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev:/dev
+      - ${XAUTH:-/tmp/.docker.xauth}:${XAUTH:-/tmp/.docker.xauth}
+      - /home/${USER}/.ssh:/home/ubuntu/.ssh
+      - /home/${USER}/.gitconfig:/home/ubuntu/.gitconfig
+      - /home/${USER}/nuplan:/home/ubuntu/nuplan
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    stdin_open: true
+    tty: true
