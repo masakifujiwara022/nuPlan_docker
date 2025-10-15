@@ -2,12 +2,12 @@
 ## Quick start
 ### 1. Install nuPlan datasets 
 
-[データセットアップ](https://nuplan-devkit.readthedocs.io/en/latest/dataset_setup.html)に従って[ダウンロードページ](https://www.nuscenes.org/nuplan#download)から以下の２つのファイルをダウンロード  
+Follow the [Dataset Setup](https://nuplan-devkit.readthedocs.io/en/latest/dataset_setup.html) and download the following two files from the [download page](https://www.nuscenes.org/nuplan#download).
 
 - nuplan-maps-v1.0.zip
 - nuplan-v1.1_mini.zip
 
-以下のようなディレクトリ構造になるように，ダウンロードしたファイルを配置．
+Arrange the downloaded files to have a directory structure like the following.
 ```
 ~/nuplan
 ├── exp
@@ -101,7 +101,7 @@ python3 nuplan-devkit/nuplan/planning/script/run_simulation.py \
 ```
 ### Simulation with ml_planner (closed-loop)
 > [!NOTE]
-> モデルのパスを置き換えて下さい 'planner.ml_planner.checkpoint_path="REPLACE.ckpt"'
+> Please replace the model path: 'planner.ml_planner.checkpoint_path="REPLACE.ckpt"'
 ```
 python3 nuplan-devkitnuplan/planning/script/run_simulation.py \
     '+simulation=closed_loop_reactive_agents' \
