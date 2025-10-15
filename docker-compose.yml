@@ -1,7 +1,5 @@
-version: "3.9"
-
 services:
-  gpu:
+  nuplan:
     container_name: my-nuPlan-cu117-gpu
     image: nuplan/nuplan_docker:my-nuPlan-cu117
     build:
